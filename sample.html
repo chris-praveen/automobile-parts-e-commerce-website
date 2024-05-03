@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Details</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Add custom styles for the modal or tooltip */
+    .image-details-modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      background-color: white;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="container featured-products">
+    <h2>Featured Products</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="imgaes/h15.jpg" class="card-img-top view-details-btn" alt="Helmet" >
+          <div class="card-body">
+            <h5 class="card-title">Helmets</h5>
+            <p class="card-text">More than 50 in stock available.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal or Tooltip HTML (hidden by default) -->
+  <div class="image-details-modal d-none">
+    <h3>Helmet Details</h3>
+    <img src="imgaes/h15.jpg" alt="Helmet">
+    <p>Description: A high-quality helmet suitable for motorcycle riders.</p>
+    <button class="btn btn-primary close-modal-btn">Close</button>
+  </div>
+
+  <!-- Bootstrap JS and your custom script -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Show modal or tooltip when clicking on the card image
+      $('.view-details-btn').on('click', function() {
+        $('.image-details-modal').removeClass('d-none');
+      });
+
+      // Close modal or tooltip when clicking close button
+      $('.close-modal-btn').on('click', function() {
+        $('.image-details-modal').addClass('d-none');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="formValidation.js" defer></script>
+    <title>Product Order</title>
+    <link rel="stylesheet" href="complaint.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Warranty Registration</h1>
+        <form class="order-form" action="http://localhost:8000/sign_up" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="code">Warranty Code:</label>
+            <input type="text" id="code" name="code" required pattern="\d{6}">
+            <label for="product">Select a Product:</label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Select a product...</option>
+                <option value="bike">Exhaust</option>
+                <option value="helmet">Helmet</option>
+                <option value="lights">Riding Gears</option>
+            </select>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+            <label for="complaint">Complaint ID:</label>
+            <input type="text" id="complaint" name="complaint" required pattern="\d{6}">
+            <input type="radio" class="radio1" name="com" value="Return">Return 
+            <input type="radio" class="radio1" name="com" value="Exchange">Exchange<br>
+            <br><button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

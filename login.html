@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Login/Signup Page</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background: linear-gradient(135deg, #a2f7f7, #a2f7f7);
+        }
+        .container {
+            max-width: 400px;
+            width: 100%;
+            background-color: #fff;
+            padding: 25px 30px;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+        }
+        .container .title {
+            font-size: 25px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group input {
+            height: 40px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 5px;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+        .button {
+            height: 40px;
+            margin-top: 20px;
+        }
+        .button button {
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #a2f7f7, #a2f7f7);
+        }
+        .button button:hover {
+            background: linear-gradient(-135deg, #42d166, #3de23d);
+        }
+        .error-message {
+            color: red;
+            margin-top: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Login / Signup</div>
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username">
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+        </div>
+        <div class="input-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" placeholder="Confirm your password">
+        </div>
+        <div class="button">
+            <button onclick="handleSignup()">Signup</button>
+        </div>
+        <div class="error-message" id="signup-error"></div>
+    </div>
+    <script>
+        function handleSignup() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            if (password !== confirmPassword) {
+                document.getElementById("signup-error").innerHTML = "Passwords do not match.";
+                return;
+            }
+            if (localStorage.getItem(username)) {
+                document.getElementById("signup-error").innerHTML = "User already exists. Please login.";
+                return;
+            }
+            localStorage.setItem(username, JSON.stringify({ password: password }));
+            alert("Signup successful! Please login.");
+            window.location.href = "form.html"; 
+        }
+    </script>
+</body>
+</html>

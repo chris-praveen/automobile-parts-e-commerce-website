@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Message Image with Content</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #87CEEB, #FFFFFF); /* Sky blue gradient background */
+}
+
+.cloud-content {
+    margin-right: 100px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cloud-image {
+    position: relative;
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="C:\Fet lab\man-clipart-10.jpg.crdownload" alt="Cloud Image" width="400" height="500" style="padding-left: 280px;">
+    <div class="cloud-content">
+        <div class="cloud-image" >
+            <img src="cloud1-removebg-preview.png" alt="Cloud Image" width="600" height="400" style="margin-right: 300px;"> 
+            <div class="message">
+                <h1><span style="font-family: Georgia, 'Times New Roman', Times, serif; color: red; font-size: xx-large;" >Top 5 Bad</span>  <br>websit Desgin in 2020</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function() {
+    // Fade in the cloud content on page load
+    $('.cloud-content').hide().fadeIn(1500);
+
+    // Add any additional jQuery code or event handlers as needed
+});
+
+</script>
+
+</body>
+</html>

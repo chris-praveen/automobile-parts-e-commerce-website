@@ -1,0 +1,90 @@
+.hero-section {
+    background: #f8f9fa;
+    padding: 100px 0;
+    text-align: center;
+    padding-right: 800px;
+    height: 55vh;
+
+  }
+#f{
+  color: #0d6efd;
+}
+  .featured-products {
+    padding: 50px 0;
+  }
+  #nav{
+      /* background-image: url('imgaes/logo3.png'); */
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 70%;
+      
+   
+     
+  }
+  #brand{
+      font-family:fantasy;
+      font-size: xx-large;
+  }
+
+  .card {
+    overflow: hidden; /* Ensure the overflow is hidden for the zoom effect */
+  }
+
+  .card img {
+    transition: transform 0.3s ease; /* Add a smooth transition to the image */
+  }
+
+  .card:hover img {
+    transform: scale(1.1); /* Zoom in on hover */
+  }
+
+  .card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add a shadow on hover */
+  }
+
+  .news{
+    padding-left: 100px;
+    background-color: black;
+    color: white;
+ }
+ .btn3{
+     height: 50px;
+     width: 100px;
+     background: white;
+     margin-left: -10px;
+     border: 2px solid white;
+     color: black;
+     font-weight: 600;
+ }
+ .news input{
+    height: 50px;
+    width: 80%;
+    border: 2px solid white;
+    outline: none;
+    cursor: pointer;
+    background: black;
+    color: white;  
+    margin-top: 30px;
+    font-weight: 600;
+ }
+ .new p{
+    margin: 0;
+ }
+   .p{
+    text-decoration: none;
+    color: white;
+   }
+#panel {
+    padding: 50px;
+    display: none;
+  }
+ .b1{
+  margin-left: 300px;
+  width: 50%;
+  font-size: x-large;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  color: white;
+  background-color: #0d6efd;
+  border-radius: 30px;
+ }
